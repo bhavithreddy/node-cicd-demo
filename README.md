@@ -1,32 +1,61 @@
+# 🚀 Node.js CI/CD Pipeline on AWS
+
+A complete **CI/CD (Continuous Integration & Continuous Deployment)** pipeline for a **Node.js Express** application using AWS services. The pipeline automatically builds, tests, packages, and deploys the application to **AWS Elastic Beanstalk** whenever code is pushed to the **main** branch of the GitHub repository.
+
+---
+
 ## 📌 Project Overview
 
-This project demonstrates a complete **CI/CD (Continuous Integration & Continuous Deployment)** pipeline on AWS for a Node.js Express application.
+This project demonstrates an end-to-end CI/CD workflow using AWS managed services. Every push to the `main` branch triggers an automated deployment pipeline without any manual intervention.
 
-The pipeline automatically builds, tests, packages, and deploys the application to **AWS Elastic Beanstalk** whenever code is pushed to the **main** branch of the GitHub repository.
+### CI/CD Workflow
 
-CI/CD Workflow
-Developer pushes code to GitHub.
-GitHub automatically triggers AWS CodePipeline.
-CodePipeline downloads the latest source code.
-AWS CodeBuild:
-Installs dependencies
-Runs Jest test cases
-Packages the application
-Build artifacts are stored in Amazon S3.
-Elastic Beanstalk deploys the latest application version.
-Application becomes available to users.
+```text
+Developer Pushes Code
+          │
+          ▼
+      GitHub Repository
+          │
+          ▼
+   AWS CodePipeline Trigger
+          │
+          ▼
+     AWS CodeBuild
+    ├── Install Dependencies
+    ├── Run Jest Tests
+    └── Package Application
+          │
+          ▼
+     Amazon S3 Artifacts
+          │
+          ▼
+ AWS Elastic Beanstalk Deploy
+          │
+          ▼
+   Application Available
+          │
+          ▼
+ SNS Notifications & CloudWatch Monitoring
+```
 
-🛠 AWS Services Used
-AWS CodePipeline
-AWS CodeBuild
-AWS Elastic Beanstalk
-Amazon S3
-Amazon SNS
-Amazon EventBridge
-IAM
-CloudWatch
+---
 
-📂 Project Structure
+## 🛠️ AWS Services Used
+
+- AWS CodePipeline
+- AWS CodeBuild
+- AWS Elastic Beanstalk
+- Amazon S3
+- Amazon SNS
+- Amazon EventBridge
+- AWS IAM
+- Amazon CloudWatch
+
+---
+
+## 📂 Project Structure
+
+```text
 node-cicd-demo/
 │
 ├── app.js
@@ -37,73 +66,146 @@ node-cicd-demo/
 ├── buildspec.yml
 ├── .gitignore
 └── README.md
+```
 
-⚙ Tech Stack
-Backend
-Node.js
-Express.js
-Testing
-Jest
-Supertest
-Cloud
-AWS CodePipeline
-AWS CodeBuild
-AWS Elastic Beanstalk
-Amazon S3
-Amazon SNS
-Amazon EventBridge
-IAM
-Version Control
-Git
-GitHub
+---
 
-✅ Features
-Automated CI/CD Pipeline
-GitHub Push Trigger
-Automated Testing using Jest
-Zero Manual Deployment
-Elastic Beanstalk Deployment
-Amazon S3 Artifact Storage
-Email Notifications using SNS
-EventBridge Integration
-CloudWatch Monitoring
-Infrastructure managed by AWS
+## ⚙️ Tech Stack
 
-🚀 Getting Started
-Clone Repository
+### Backend
+
+- Node.js
+- Express.js
+
+### Testing
+
+- Jest
+- Supertest
+
+### Cloud & DevOps
+
+- AWS CodePipeline
+- AWS CodeBuild
+- AWS Elastic Beanstalk
+- Amazon S3
+- Amazon SNS
+- Amazon EventBridge
+- AWS IAM
+- Amazon CloudWatch
+
+### Version Control
+
+- Git
+- GitHub
+
+---
+
+## ✅ Features
+
+- Automated CI/CD Pipeline
+- GitHub Push Trigger
+- Automated Testing using Jest
+- Automated Build & Packaging
+- Zero Manual Deployment
+- AWS Elastic Beanstalk Deployment
+- Amazon S3 Artifact Storage
+- Amazon SNS Email Notifications
+- Amazon EventBridge Integration
+- Amazon CloudWatch Monitoring
+- IAM-based Secure Access Control
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/<your-username>/node-cicd-demo.git
-
 cd node-cicd-demo
-Install Dependencies
+```
+
+### 2. Install Dependencies
+
+```bash
 npm install
-Run Application
+```
+
+### 3. Run the Application
+
+```bash
 npm start
+```
 
-Application runs on
+The application will be available at:
 
+```
 http://localhost:8080
-Run Tests
+```
+
+### 4. Run Tests
+
+```bash
 npm test
+```
 
+---
 
-📚 Learning Outcomes
+## 📚 Learning Outcomes
 
 This project demonstrates practical experience with:
 
-CI/CD concepts
-GitHub integration with AWS
-AWS CodePipeline
-AWS CodeBuild
-Elastic Beanstalk deployment
-Amazon S3 artifact management
-Automated testing with Jest
-Event-driven notifications
-IAM role configuration
-DevOps automation
+- CI/CD concepts
+- GitHub integration with AWS
+- AWS CodePipeline
+- AWS CodeBuild
+- AWS Elastic Beanstalk
+- Amazon S3 artifact management
+- Automated testing using Jest
+- Event-driven notifications with SNS and EventBridge
+- IAM role and permission management
+- DevOps automation on AWS
 
+---
 
-👨‍💻 Author
+## 📈 CI/CD Pipeline Flow
 
-Bhavith Reddy
+```text
+GitHub
+   │
+   ▼
+CodePipeline
+   │
+   ▼
+CodeBuild
+   │
+   ├── Install Dependencies
+   ├── Run Tests
+   └── Build Artifact
+   │
+   ▼
+Amazon S3
+   │
+   ▼
+Elastic Beanstalk
+   │
+   ▼
+Live Application
+   │
+   ├── Amazon SNS Notifications
+   └── CloudWatch Monitoring
+```
 
-If you found this project helpful, consider giving it a ⭐ on GitHub!
+---
+
+## 👨‍💻 Author
+
+**Bhavith Reddy**
+
+Interested in **DevOps**, **Cloud Engineering**, and **AWS Automation**.
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a **⭐ Star** on GitHub!
