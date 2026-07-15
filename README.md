@@ -37,6 +37,8 @@ Developer Pushes Code
           ▼
  SNS Notifications & CloudWatch Monitoring
 ```
+<img width="671" height="318" alt="image" src="https://github.com/user-attachments/assets/d3030799-cbd1-4ec1-be74-80bad8c3e1e6" />
+
 
 ---
 
